@@ -1,0 +1,17 @@
+<?php
+include('db_connect.php')
+$username=$_POST['username'];
+$password=$_post['password'];
+$confirm_password=$_post['confirm_password'];
+echo &username;
+echo &password;
+echo &confirm_password;
+$sql=mysqli_query($con,"INSERT INTO register(username,password,confirm_password")
+VALUES
+('$username','$password','$confirm_password')
+if($sql==true){
+    echo'<script type="text/javascript">alert("registration successful..!);
+    widow.location=\'index.html\;</script>';
+}else{echo"registration error:".mysqli_error()}
+
+?>
